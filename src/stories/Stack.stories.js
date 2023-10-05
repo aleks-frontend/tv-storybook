@@ -14,6 +14,7 @@ const StackItemPlaceholder = styled.div`
 export default {
   title: "Test Components/Stack",
   component: Stack,
+  tags: ['autodocs'],
   argTypes: {
     numberOfChildren: { type: "number", defaultValue: 4 },
   },

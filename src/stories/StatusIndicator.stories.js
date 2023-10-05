@@ -3,7 +3,8 @@ import { taskStatus } from "../utils/enums"
 
 export default {
     title: 'Trustview components/StatusIndicator',
-    component: StatusIndicator
+    component: StatusIndicator,
+    tags: ['autodocs'],
 }
 
 const Template = args => <StatusIndicator {...args} />
