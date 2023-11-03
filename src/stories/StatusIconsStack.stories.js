@@ -32,17 +32,17 @@ const defaultIcons = [
   {
     faIcon: FaClipboardCheck,
     active: true,
-    activeTooltipText: "some text",
+    activeTooltipText: "DPIA required",
   },
   {
     faIcon: FaBatteryHalf,
     active: false,
-    activeTooltipText: "some text",
+    activeTooltipText: "You are missing some stuff",
   },
   {
     faIcon: FaLock,
     active: false,
-    activeTooltipText: "some text",
+    activeTooltipText: "This is locked",
   },
   {
     faIcon: FaPuzzlePiece,

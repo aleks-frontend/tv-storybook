@@ -65,6 +65,9 @@ const Colors = {
     mediumGray: '#565758',
     bodyBgGray: '#EEF2F6',
     gray100: '#19191D',
+
+    warningBanner: '#FEF5C8',
+    errorBanner: '#FFE6E5'
 };
 
 export default Colors;
