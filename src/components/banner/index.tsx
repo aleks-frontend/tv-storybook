@@ -1,17 +1,22 @@
-import styled from 'styled-components';
-import { FaExclamationTriangle } from 'react-icons/fa';
+import styled from "styled-components";
+import { FaExclamationTriangle } from "react-icons/fa";
 
-import { FlexBox } from '../styled/flex-box';
-import { P } from '../styled/texts';
+import { FlexBox } from "../styled/flex-box";
+import { P } from "../styled/texts";
 
-import Colors from '../../utils/colors';
+import Colors from "../../utils/colors";
 
 const BannerMain = styled(FlexBox)<{ backgroundColor: string }>`
-    gap: 8px;
-    padding: 0 16px;
-    height: 36px;
+    gap: 12px;
+    flex-wrap: nowrap;
+    padding: 8px 16px;
+    min-height: 36px;
     border-radius: 12px;
     background-color: ${props => props.backgroundColor};
+
+    .icon {
+        flex-shrink: 0;
+    }
 `;
 
 interface Props {
@@ -20,12 +25,13 @@ interface Props {
     FaIcon?: React.ElementType;
     children: React.ReactNode;
     textAlignment?: 'left' | 'center' | 'right';
+    maxWidth?: string;
 }
 
-const Banner: React.FC<Props> = ({ backgroundColor = Colors.warningBanner, iconColor = Colors.gold4, FaIcon, children, textAlignment = 'left' }) => {
+const Banner: React.FC<Props> = ({ backgroundColor = Colors.warningBanner, iconColor = Colors.gold4, FaIcon, children, textAlignment = 'left', maxWidth = '100%' }) => {
     return (
-        <BannerMain backgroundColor={backgroundColor} justifyContent={textAlignment === 'center' ? 'center' : textAlignment === 'left' ? 'flex-start' : 'flex-end'}>
-            {FaIcon ? <FaIcon color={iconColor} /> : <FaExclamationTriangle color={iconColor} />}
+        <BannerMain backgroundColor={backgroundColor} justifyContent={textAlignment === 'center' ? 'center' : textAlignment === 'left' ? 'flex-start' : 'flex-end'} maxWidth={maxWidth}>
+            {FaIcon ? <FaIcon className="icon" color={iconColor} /> : <FaExclamationTriangle color={iconColor} className="icon" />}
             <P>{children}</P>
         </BannerMain>
     );

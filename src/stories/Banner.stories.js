@@ -41,5 +41,15 @@ ErrorBannerCentered.args = {
     backgroundColor: Colors.errorBanner,
     iconColor: Colors.red4,
     FaIcon: FaExclamationTriangle,
-    textAlignment: 'center'
+    textAlignment: 'center',
+};
+
+export const ErrorBannerLimitedWidth = Template.bind({});
+ErrorBannerLimitedWidth.args = {
+    children: <div>Red error banner with some critical info and error icon and centered</div>,
+    backgroundColor: Colors.errorBanner,
+    iconColor: Colors.red4,
+    FaIcon: FaExclamationTriangle,
+    textAlignment: 'center',
+    maxWidth: '300px'
 };
